@@ -1,7 +1,7 @@
 struct Fridge {
     brand: String,
     color: String,
-    temperature: String,
+    temperature: i32,
     price: i32,
     has_ice_machine: bool,
     fridgey: bool,
@@ -12,12 +12,13 @@ fn main() {
     let fridge = Fridge {
         brand: String::from("samsung"),
         color: String::from("black"),
-        temperature: String::from("very cold"),
-        price: 69420,
+        temperature: 69,
+        price: 420,
         has_ice_machine: true,
         fridgey: true,
         can_run_doom: true,
     };
+    
     let brand = &fridge.brand;
     let color = &fridge.color;
     let temperature = &fridge.temperature;
@@ -33,9 +34,15 @@ fn main() {
     println!("is the fridge fridgey? {is_fridgey}");
 
     if fridge.can_run_doom {
-    	println!("can it?? yes it does!!");
-    } else {
-    	println!("awww..");
+        println!("yaey");
+    } 
+    else {
+        println!("aw. why though?");
     }
+    
+match fridge.temperature {
+    ..69 => println!("no more nice.. what have you done?"),
+    69 => println!("yippee! u have satisfied the gods of the internet culture"),
+    70.. => println!("can u at least make it 420 celsius? oh wait thats gonna melt ur house scratch that"),
 }
-
+}
